@@ -42,8 +42,25 @@ public class MariageController {
         //return fail;
 	}
 	
-	@GetMapping("/test")
-	public String test() {
-		return "test OK";
+	@GetMapping("/response")
+	public ModelAndView response(@RequestParam(value = "rep", required = false) String rep, @RequestParam(value = "id", required = false) int id) {
+		User user = null;
+		try {
+			user = DB.getInstance().loadUserById(id);
+			DB.getInstance().storeResponse(id, rep);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return new ModelAndView("redirect:/info?lang="+user.getLang());
+		
+	}
+	
+	@GetMapping("/info")
+	public ModelAndView info(@RequestParam(value = "lang", required = false) String rep) {
+		switch (rep){
+		case "de": return new ModelAndView("infoDe.html");
+		case "en": return new ModelAndView("infoFr.html");
+		default : return new ModelAndView("infoFr.html");
+		}
 	}
 }

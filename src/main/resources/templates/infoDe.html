@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mariage Laetitia et Stephane</title>
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="info.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Kaushan+Script|Ma+Shan+Zheng|Dancing+Script|Indie+Flower|Tangerine:700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+  $(function() {
+  $('#bookmarkme').click(function() {
+    if (window.sidebar && window.sidebar.addPanel) { // Mozilla Firefox Bookmark
+      window.sidebar.addPanel(document.title, window.location.href, '');
+    } else if (window.external && ('AddFavorite' in window.external)) { // IE Favorite
+      window.external.AddFavorite(location.href, document.title);
+    } else if (window.opera && window.print) { // Opera Hotlist
+      this.title = document.title;
+      return true;
+    } else { // webkit - safari/chrome
+      alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+    }
+  });
+});
+  </script>
+</head>
+
+<body>
+  <div class="info_panel">
+        <h1>Laetitia & Stéphane</h1>
+        <p>Auf diese Seite findet ihr alle informationen zur Hochzeit, nimmt diesem link zu den <a class="link" id="bookmarkme" href="#" rel="sidebar" title="Mettre en favoris">favoriten</a>!
+          <br />
+          Wenn ihr uns direkt anschreiben wollt hier findet ihr unsere email adresse <a href="mailto:sblh.mariage@gmail.com" class="link">sblh.mariage@gmail.com</a>
+        </p>
+        <h2>Das Datum</h2>
+        <p>
+          Die Party findet am samstag den 13. September 2025 ab 18h statt.
+        </p>
+
+        <h2>Den Ort</h2>
+        <p>
+          Rendez vous au <a class="link" href="https://goo.gl/maps/zQQxbW3XNsD6VKKU6">Foyer Saint Laurent à Hésingue</a>.
+        </p>
+
+        <h2>Den dress code</h2>
+        <p>
+          Elégant in Rot & Schwarz
+        </p>
+        
+  </div>
+</body>
+</html>

@@ -64,6 +64,20 @@ public class DB {
         return u;
     }
     
+    public User loadUserById(int id) throws SQLException{
+        String sql = "select * from mariage_user where id=?";
+        PreparedStatement stmt = getConnection().prepareStatement(sql);
+        stmt.setInt(1, id);
+        ResultSet res = stmt.executeQuery();
+        User u = null;
+        if (res.next()){
+            u = createUser(res);
+        }
+        res.close();
+        stmt.close();
+        return u;
+    }
+    
     private User createUser(ResultSet res) throws SQLException {
         if (res == null)
             return null;
@@ -85,6 +99,15 @@ public class DB {
         stmt.setString(3, user.getType());
         stmt.setString(4, user.getLang());
         stmt.setBoolean(5, user.isSolo());
+        stmt.executeUpdate();
+        stmt.close();
+    }
+    
+    public void storeResponse(int id, String rep) throws SQLException {
+    	String sql = "insert into mariage_response(userId,response)values(?,?)";
+        PreparedStatement stmt = getConnection().prepareStatement(sql);
+        stmt.setInt(1, id);
+        stmt.setString(2, rep);
         stmt.executeUpdate();
         stmt.close();
     }

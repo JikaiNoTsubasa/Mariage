@@ -6,3 +6,10 @@ create table mariage_user(
 	lang varchar(2) not null,
 	solo bool not null
 )engine=innodb;
+
+create table mariage_response(
+id int auto_increment primary key,
+userId int,
+response varchar(3) not null,
+foreign key (userId) references mariage_user(id)
+)engine=innodb;

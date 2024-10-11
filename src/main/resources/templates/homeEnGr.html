@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+	<meta charset="utf-8">
+	<title>S.E.A.L</title>
+	<meta name="author" content="SitePoint">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Kaushan+Script|Ma+Shan+Zheng|Dancing+Script|Indie+Flower|Tangerine:700&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+	<div class="outer">
+	    <div class="middle">
+	      <div id="myPage" class="page">
+	        <img src="card_left.png" id="cleft" width="600px" height="600px"/>
+	        <img src="card_right.png" id="cright"  width="600px" height="600px"/>
+	        <div id="bb" class="invit">
+	          Hello <span th:text="${user.name}"></span> , welcome to you!
+            <br /><br />
+            Laetitia and Stéphane invit you to their wedding on<br /><span class="date_color">Sunday the 13th of Septembre 2025</span>!
+            <br /><br />
+            Will you answer the call?<br /><br />
+			  <a th:href="@{${'response?id='+user.id+'&rep=yes'}}" class="link">Yes!</a>  <a th:href="@{${'response?id='+user.id+'&rep=no'}}" class="link">No</a>
+			</div>
+	          
+	      </div>
+	    </div>
+	  </div>
+
+	<script>
+
+	$(document).ready(function() {
+	  setTimeout(
+	function()
+	{
+	  $("#cleft").animate({left: "-=400"}, 4000);
+	  $("#cright").animate({left: "+=400"}, 4000);
+	}, 2000);
+	});
+	</script>
+</body>
+</html>
