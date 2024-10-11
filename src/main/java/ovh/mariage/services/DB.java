@@ -42,7 +42,7 @@ public class DB {
             throw new RuntimeException(e);
         }
         SPassword pwd = new SPassword("c2JpLSRiaXVzZXJTIzg4");
-        String host = "localhost";
+        String host = "triedge.ovh";
         if (System.getProperty("host") != null){
             host = System.getProperty("host");
         }
