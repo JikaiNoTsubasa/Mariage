@@ -1,0 +1,105 @@
+body
+{
+  background: #880000;
+  width: 100%;
+}
+
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.page
+{
+  width: 598px;
+  height: 600px;
+  margin: auto;
+  background: #880000;
+  position: relative;
+  /*border: 1px solid #000;*/
+}
+
+#cleft
+{
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#cright
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.link
+{
+  text-decoration: none;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  color: #000;
+  background: #FFF;
+  display: inline-block;
+  margin: auto;
+  z-index: 10;
+}
+
+.link:hover
+{
+  background: #42b883;
+  color: #FFF;
+}
+
+.invit
+{
+  position: absolute;
+  top: 50px;
+  color: #FFF;
+  font-size: 50px;
+  text-align: center;
+  width: 598px;
+  /*
+      font-family: 'Ma Shan Zheng', cursive;
+      font-family: 'Kaushan Script', cursive; OK
+      font-family: 'Amatic SC', cursive;
+    font-family: 'Indie Flower', cursive; -
+    font-family: 'Dancing Script', cursive; --> first
+  */
+  font-family: 'Tangerine', cursive;
+}
+
+.date_color
+{
+  /*color: #e4cd70;*/
+  text-decoration: underline;
+}
+
+.list_panel
+{
+  color: #FFF;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  font-size: 30px;
+  font-family: 'Tangerine', cursive;
+}
+
+.list_panel h1
+{
+  font-family: 'Tangerine', cursive;
+}

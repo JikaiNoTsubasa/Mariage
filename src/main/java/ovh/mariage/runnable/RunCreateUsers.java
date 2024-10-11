@@ -20,7 +20,7 @@ public class RunCreateUsers {
 		DB.getInstance().storeUser(new User("Laure, Quentin et Célestin", "L.Q", "M", "fr", false));
 		DB.getInstance().storeUser(new User("Laurence et Philippe", "L.P", "M", "fr", false));
 		DB.getInstance().storeUser(new User("Martine et Christian", "M.C", "M", "fr", false));
-		DB.getInstance().storeUser(new User("Sandra et Geoffrey", "M.C", "M", "fr", false));
+		DB.getInstance().storeUser(new User("Sandra et Geoffrey", "S.G", "M", "fr", false));
 		DB.getInstance().storeUser(new User("Candice, Aurélien et Daryl", "C.A", "M", "fr", false));
 		DB.getInstance().storeUser(new User("Marie, Michael et les enfants", "M.M", "M", "fr", false));
 		DB.getInstance().storeUser(new User("Katia et Julien", "K.J", "M", "fr", false));
@@ -57,7 +57,7 @@ public class RunCreateUsers {
 		DB.getInstance().storeUser(new User("Odeleine, François, Margot et Adèle", "O.F.M.A", "M", "fr", false));
 		
 		// To verify
-		DB.getInstance().storeUser(new User("Ludovic et Madame", "Lu", "M", "fr", false)); // FIXME to verify
+		DB.getInstance().storeUser(new User("Ludovic et Madame", "LG", "M", "fr", false)); // FIXME to verify
 		DB.getInstance().storeUser(new User("Valentine et Monsieur", "Va", "M", "fr", false)); // FIXME to verify
 		DB.getInstance().storeUser(new User("Nicolas et Mme", "NIJ", "M", "fr", false)); // FIXME to verify
 		

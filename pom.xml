@@ -65,6 +65,6 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>mariage</finalName>
-    </build>
+    <finalName>mariage</finalName>
+</build>
 </project>
