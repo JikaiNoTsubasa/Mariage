@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+	<meta charset="utf-8">
+	<title>S.E.A.L</title>
+	<meta name="author" content="SitePoint">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Kaushan+Script|Ma+Shan+Zheng|Dancing+Script|Indie+Flower|Tangerine:700&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+	<div class="outer">
+	    <div class="middle">
+	      <div id="myPage" class="page">
+	        <img src="img/card_left.png" id="cleft" width="600px" height="600px"/>
+	        <img src="img/card_right.png" id="cright"  width="600px" height="600px"/>
+	        <div id="bb" class="invit">
+	          Hello <span th:text="${user.name}"></span>
+	          
+	          }else{
+	            echo 'inconnue';
+	          }
+
+	          if ($code=='J.L'){
+	            // Display English
+	            ?>
+	            , welcome to you!
+	            <br /><br />
+	            Laetitia and Stéphane invit you to their wedding on<br /><span class="date_color">Sunday the 12th of Septembre 2020</span>!
+	            <br /><br />
+	            Will you answer the call?
+	            <br /><br />
+	            <?php
+	            if (isset($code)){
+	              echo '<a href="save.php?code='.$code.'&rep=yes" class="link">Yes!</a>  <a href="save.php?code='.$code.'&rep=no" class="link">No</a>';
+	            }
+	          }elseif($code=='Na' || $code=='I.M' || $code=='K.S'){
+	            if ($code=='Na'){
+	              echo ', sei wilkommen!<br /><br />';
+	              echo 'Laetitia und Stéphane laden dich zu ihrer Hochzeit am <br /><span class="date_color">12. September 2020</span>!<br /><br />';
+	              echo 'Können wir auf dich zählen?<br /><br />';
+	            }else{
+	              echo ', seid wilkommen!<br /><br />';
+	              echo 'Laetitia und Stéphane laden euch zu ihrer Hochzeit am <br /><span class="date_color">12. September 2020</span>!<br /><br />';
+	              echo 'Können wir auf euch zählen?<br /><br />';
+	            }
+	            if (isset($code)){
+	              echo '<a href="save.php?code='.$code.'&rep=yes" class="link">Ja!</a>  <a href="save.php?code='.$code.'&rep=no" class="link">Nein</a>';
+	            }
+	          }else{
+	            if ($code=='Cy' || $code=='B' || $code=='Lo' || $code=='LG' || $code=='Fr' || $code=='STH' || $code=='NIJ' || $code=='Er' || $code=='Em' || $code=='Pi'){
+	              echo ', soit le bienvenu!<br /><br />';
+	              echo 'Laetitia et Stéphane t\'invitent à leur mariage le <br /><span class="date_color">Samedi 12 septembre 2020</span>!<br /><br />';
+	              echo 'Répondra tu à l\'appel?<br /><br />';
+	            }elseif($code=='F' || $code=='Va' || $code=='So'){
+	              echo ', soit la bienvenue!<br /><br />';
+	              echo 'Laetitia et Stéphane t\'invitent à leur mariage le <br /><span class="date_color">Samedi 12 septembre 2020</span>!<br /><br />';
+	              echo 'Répondra tu à l\'appel?<br /><br />';
+	            }else{
+	              echo ', soyez les bienvenues!<br /><br />';
+	              echo 'Laetitia et Stéphane vous invitent à leur mariage le <br /><span class="date_color">Samedi 12 septembre 2020</span>!<br /><br />';
+	              echo 'Répondrez vous à l\'appel?<br /><br />';
+	            }
+	            if (isset($code)){
+	              echo '<a href="save.php?code='.$code.'&rep=yes" class="link">Oui!</a>  <a href="save.php?code='.$code.'&rep=no" class="link">Non</a>';
+	            }
+	          }
+	          ?>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+
+
+	<script>
+
+	$(document).ready(function() {
+	  setTimeout(
+	function()
+	{
+	  $("#cleft").animate({left: "-=400"}, 4000);
+	  $("#cright").animate({left: "+=400"}, 4000);
+	}, 2000);
+	});
+	</script>
+</body>
+</html>
