@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Mariage Laetitia et Stephane</title>
+  <meta name="author" content="Steph">
+  <link rel="stylesheet" href="info.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Kaushan+Script|Ma+Shan+Zheng|Dancing+Script|Indie+Flower|Tangerine:700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+  <div class="info_panel">
+      <h1>Laetitia & Stéphane</h1>
+      <p>Nous avons l'intention de prendre contact avec l'hotel près de chez nous pour organiser des chambres et potentiellement négocier un prix. Si vous êtes intéressez par une chambre merci de cocher la case si dessous:
+      </p>
+      <br />
+      <form action="#" th:action="@{/userform}" th:object="${userForm}" method="post">
+      	<span><input type="checkbox" name="takeHostel" th:field="*{takeHotel}"/> Je souhaite prendre une chambre</span><br/>
+        <p><input type="submit" value="Continuer" class="link"/> <input type="reset" value="Reset" /></p>
+    </form>
+
+  </div>
+</body>
+</html>

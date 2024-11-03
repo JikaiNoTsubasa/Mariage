@@ -14,6 +14,10 @@ public class RunCreateUsers {
 
 	public static void main(String[] args) throws SQLException {
 		log.info("Start loading");
+		
+		// Test
+		DB.getInstance().storeUser(new User("Test User", "test", "M", "fr", false));
+		
 		// FR groups
 		DB.getInstance().storeUser(new User("Mathilde, Anthony et Rose", "M.A.R", "M", "fr", false));
 		DB.getInstance().storeUser(new User("Marie-Lise et Jean-Marc", "M.JM", "M", "fr", false));
@@ -77,7 +81,6 @@ public class RunCreateUsers {
 		
 		// EN groups
 		DB.getInstance().storeUser(new User("Jessica, Luke and children", "J.L", "M", "en", false));
-		
 		
 		log.info("Finished loading");
 	}

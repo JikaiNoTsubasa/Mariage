@@ -104,11 +104,21 @@ public class DB {
     }
     
     public void storeResponse(int id, String rep) throws SQLException {
-    	String sql = "insert into mariage_response(userId,response)values(?,?)";
-        PreparedStatement stmt = getConnection().prepareStatement(sql);
-        stmt.setInt(1, id);
-        stmt.setString(2, rep);
-        stmt.executeUpdate();
-        stmt.close();
+    	String sql = "update mariage_user set response=? where id=?";
+		PreparedStatement stmt = getConnection().prepareStatement(sql);
+		stmt.setString(1, rep);
+		stmt.setInt(2, id);
+		stmt.executeUpdate();
+		stmt.close();
+    	
+    }
+    
+    public void storeHotelResponse(int userId, boolean takeHotel) throws SQLException {
+    	String sql = "update mariage_user set takeHotel=? where id=?";
+		PreparedStatement stmt = getConnection().prepareStatement(sql);
+		stmt.setBoolean(1, takeHotel);
+		stmt.setInt(2, userId);
+		stmt.executeUpdate();
+		stmt.close();
     }
 }
