@@ -64,7 +64,7 @@ public class MariageController {
 		ModelAndView model = null;
 		switch (user.getLang()){
 		case "de": model = new ModelAndView("formDe.html");break;
-		case "en": model = new ModelAndView("formEn.html");break;
+		case "en": model = new ModelAndView("formFr.html");break;
 		default : model = new ModelAndView("formFr.html");break;
 		}
 		model.addObject("user", user);
@@ -78,7 +78,7 @@ public class MariageController {
 		if (user == null)
 			throw new RuntimeException("Session user is null!");
 		try {
-			DB.getInstance().storeHotelResponse(user.getId(), userForm.isTakeHotel());
+			DB.getInstance().storeFormResponse(user.getId(), userForm.isTakeHotel(), userForm.getCount());
 		}catch (Exception e) {
 			e.printStackTrace();
 		}

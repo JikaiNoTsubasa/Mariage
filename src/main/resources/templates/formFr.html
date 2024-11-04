@@ -17,8 +17,20 @@
       </p>
       <br />
       <form action="#" th:action="@{/userform}" th:object="${userForm}" method="post">
-      	<span><input type="checkbox" name="takeHostel" th:field="*{takeHotel}"/> Je souhaite prendre une chambre</span><br/>
-        <p><input type="submit" value="Continuer" class="link"/> <input type="reset" value="Reset" /></p>
+      	<label class="form-control">
+      		<select th:field="*{count}" th:required="required">
+      			<option value="1">1</option>
+      			<option value="2">2</option>
+      			<option value="3">3</option>
+      			<option value="4">4</option>
+      			<option value="5">5</option>
+      			<option value="6">6</option>
+      			<option value="+">+</option>
+      		</select> Nombre de personnes assistant au mariage?
+      		<br/>
+      		<input type="checkbox" name="takeHostel" th:field="*{takeHotel}"/> Je souhaite prendre une chambre
+		</label>
+        <p><input type="submit" value="Continuer" class="b-link"/> <input type="reset" value="Reset" class="b-link"/></p>
     </form>
 
   </div>

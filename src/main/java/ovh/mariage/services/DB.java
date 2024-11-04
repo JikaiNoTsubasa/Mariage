@@ -113,11 +113,12 @@ public class DB {
     	
     }
     
-    public void storeHotelResponse(int userId, boolean takeHotel) throws SQLException {
-    	String sql = "update mariage_user set takeHotel=? where id=?";
+    public void storeFormResponse(int userId, boolean takeHotel, String count) throws SQLException {
+    	String sql = "update mariage_user set takeHotel=?, count=? where id=?";
 		PreparedStatement stmt = getConnection().prepareStatement(sql);
 		stmt.setBoolean(1, takeHotel);
-		stmt.setInt(2, userId);
+		stmt.setString(2, count);
+		stmt.setInt(3, userId);
 		stmt.executeUpdate();
 		stmt.close();
     }
