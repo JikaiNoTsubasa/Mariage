@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -78,6 +79,17 @@ public class DB {
         return u;
     }
     
+    public ArrayList<User> loadAllUsers() throws SQLException{
+    	String sql = "select * from mariage_user order by id asc";
+        PreparedStatement stmt = getConnection().prepareStatement(sql);
+        ResultSet res = stmt.executeQuery();
+        ArrayList<User> users = new ArrayList<User>();
+        while (res.next()) {
+        	users.add(createUser(res));
+        }
+        return users;
+    }
+    
     private User createUser(ResultSet res) throws SQLException {
         if (res == null)
             return null;
@@ -87,7 +99,10 @@ public class DB {
         u.setCode(res.getString("code"));
         u.setType(res.getString("type"));
         u.setLang(res.getString("lang"));
+        u.setResponse(res.getString("response"));
+        u.setCount(res.getString("count"));
         u.setSolo(res.getBoolean("solo"));
+        u.setTakeHotel(res.getBoolean("takeHotel"));
         return u;
     }
     

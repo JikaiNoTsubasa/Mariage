@@ -64,3 +64,8 @@ body
   background: #42b883;
   color: #FFF;
 }
+
+.admin-container
+{
+	font-family: 'Roboto';
+}

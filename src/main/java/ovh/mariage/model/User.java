@@ -7,6 +7,9 @@ public class User {
 	private String code;
 	private String type = "M";
 	private String lang = "fr";
+	private String response = "NotYetAnswered";
+	private boolean takeHotel = false;
+	private String count = "1";
 	private boolean solo = false;
 	
 	public User() {
@@ -55,6 +58,30 @@ public class User {
 	}
 	public void setSolo(boolean solo) {
 		this.solo = solo;
+	}
+
+	public String getResponse() {
+		return response;
+	}
+
+	public void setResponse(String response) {
+		this.response = response;
+	}
+
+	public boolean isTakeHotel() {
+		return takeHotel;
+	}
+
+	public void setTakeHotel(boolean takeHotel) {
+		this.takeHotel = takeHotel;
+	}
+
+	public String getCount() {
+		return count;
+	}
+
+	public void setCount(String count) {
+		this.count = count;
 	}
 	
 	

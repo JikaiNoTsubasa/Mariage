@@ -1,6 +1,7 @@
 package ovh.mariage.api;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpSession;
 
@@ -92,6 +93,18 @@ public class MariageController {
 		case "en": return new ModelAndView("infoFr.html");
 		default : return new ModelAndView("infoFr.html");
 		}
+	}
+	
+	@GetMapping("/admin")
+	public ModelAndView admin() {
+		ModelAndView model = new ModelAndView("admin.html");
+		try {
+			ArrayList<User> users = DB.getInstance().loadAllUsers();
+			model.addObject("users", users);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return model;
 	}
 	
 }

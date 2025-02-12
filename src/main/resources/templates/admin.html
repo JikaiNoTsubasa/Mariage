@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Mariage Admin</title>
+  <meta name="author" content="Steph">
+  <link rel="stylesheet" href="info.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Kaushan+Script|Ma+Shan+Zheng|Dancing+Script|Indie+Flower|Tangerine:700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+  <div class="admin-container">
+      <h1>Admin</h1>
+      <br />
+      <table>
+      	<tr>
+      		<th>Nom</th>
+      		<th>Code</th>
+      		<th>Réponse</th>
+      		<th>Nombre</th>
+      	</tr>
+      	<tr th:each="user : ${users}">
+      		<td th:text="${user.name}"></td>
+         	<td th:text="${user.code}"></td>
+         	<td th:text="${user.response}"></td>
+         	<td th:text="${user.count}"></td>
+      	</tr>
+      </table>
+
+  </div>
+</body>
+</html>
