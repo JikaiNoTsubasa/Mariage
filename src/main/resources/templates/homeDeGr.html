@@ -16,9 +16,9 @@
 	        <img src="card_left.png" id="cleft" width="600px" height="600px"/>
 	        <img src="card_right.png" id="cright"  width="600px" height="600px"/>
 	        <div id="bb" class="invit">
-	          Hello <span th:text="${user.name}"></span> , sei wilkommen!<br /><br />
-              Laetitia und Stéphane laden sie zu ihrer Hochzeit am <br /><span class="date_color">13. September 2025</span>!<br /><br />
-              Können wir auf dich zählen?<br /><br />
+	          Hello <span th:text="${user.name}"></span>!<br /><br />
+              Laetitia und Stéphane laden euch zu ihrer Hochzeit am <br /><span class="date_color">13. September 2025</span>!<br /><br />
+              Können wir auf euch zählen?<br /><br />
 			  <a th:href="@{${'response?id='+user.id+'&rep=yes'}}" class="link">Ja!</a>  <a th:href="@{${'response?id='+user.id+'&rep=no'}}" class="link">Nein</a>
 			</div>
 	          

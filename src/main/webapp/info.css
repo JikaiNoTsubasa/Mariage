@@ -10,12 +10,12 @@ body
 .link
 {
   text-decoration: none;
-  color: #e4cd70;
+  color: red;
 }
 
 .link:hover
 {
-  color: #70e48b;
+  color: #ffffff;
 }
 
 .seal_title

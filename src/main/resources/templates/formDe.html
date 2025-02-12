@@ -3,7 +3,7 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
   <meta charset="utf-8">
-  <title>Mariage Laetitia et Stephane</title>
+  <title>Mariage Laetitia und Stephane</title>
   <meta name="author" content="Steph">
   <link rel="stylesheet" href="info.css">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Kaushan+Script|Ma+Shan+Zheng|Dancing+Script|Indie+Flower|Tangerine:700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
   <div class="info_panel">
       <h1>Laetitia & Stéphane</h1>
-      <p>Nous avons l'intention de prendre contact avec l'hotel près de chez nous pour organiser des chambres et potentiellement négocier un prix (à vos frais). Si vous êtes intéressez par une chambre merci de cocher la case si dessous:
+      <p>Wir beabsichtigen, das Hotel im Dorf zu kontaktieren um Zimmer zu reservieren und einen Preis auszuhandeln (auf eure kosten). Bei Interesse kreuzt bitte das Kästchen an.
       </p>
       <br />
       <form action="#" th:action="@{/userform}" th:object="${userForm}" method="post">
@@ -26,11 +26,11 @@
       			<option value="5">5</option>
       			<option value="6">6</option>
       			<option value="+">+</option>
-      		</select> Nombre de personnes assistant au mariage?
+      		</select> Wieviel Personen werden teilnehmen?
       		<br/>
-      		<input type="checkbox" name="takeHostel" th:field="*{takeHotel}"/> Je souhaite prendre une chambre
+      		<input type="checkbox" name="takeHostel" th:field="*{takeHotel}"/> Wir wünschen uns ein Zimmer
 		</label>
-        <p><input type="submit" value="Continuer" class="b-link"/> <input type="reset" value="Reset" class="b-link"/></p>
+        <p><input type="submit" value="Fortsetzen" class="b-link"/> <input type="reset" value="Reset" class="b-link"/></p>
     </form>
 
   </div>
